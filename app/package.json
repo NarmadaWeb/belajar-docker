@@ -1,0 +1,16 @@
+{
+	"name": "contoh-node-redis",
+	"version": "1.0.0",
+	"description": "Contoh aplikasi Node.js dengan Redis untuk Docker",
+	"main": "server.js",
+	"scripts": {
+	  "start": "node server.js",
+	  "test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+	  "express": "^4.18.2",
+	  "redis": "^4.6.7"
+	},
+	"author": "Indra",
+	"license": "MIT"
+  }

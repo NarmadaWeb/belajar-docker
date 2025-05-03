@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: contoh_app_node
+    restart: on-failure
+    ports:
+      - "3000:3000"
+    environment:
+      - REDIS_HOST=cache
+      - REDIS_PORT=6379
+      - PORT=3000
+      - NODE_ENV=development
+    networks:
+      - app-net
+    depends_on:
+      - cache
+
+  cache:
+    image: "redis:7-alpine"
+    container_name: contoh_cache_redis
+    restart: always
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    driver: bridge

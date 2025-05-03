@@ -1,0 +1,22 @@
+# Abaikan direktori dependensi Node.js (akan diinstall di dalam kontainer)
+node_modules
+
+# Abaikan log npm
+npm-debug.log
+yarn-error.log
+
+# Abaikan file sistem operasi
+.DS_Store
+Thumbs.db
+
+# Abaikan konfigurasi Git
+.git
+.gitignore
+
+# Abaikan file Docker itu sendiri (tidak perlu disalin ke image)
+Dockerfile
+docker-compose.yml
+*.md
+
+# Abaikan file environment lokal (JANGAN PERNAH commit rahasia!)
+.env
